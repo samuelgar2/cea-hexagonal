@@ -6,8 +6,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cea</groupId>
-    <artifactId>cea-ddd</artifactId>
+    <artifactId>cea-hexagonal</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>CEA - Arquitectura Hexagonal</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -22,6 +23,11 @@
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.8</version>
         </dependency>
     </dependencies>
 

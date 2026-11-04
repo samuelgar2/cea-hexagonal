@@ -1,17 +1,17 @@
+
 package com.cea.domain.event;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public final class PersonaRegistrada {
 
-    private final UUID idPersona;
+    private final Integer idPersona;
     private final LocalDateTime fechaRegistro;
 
-    public PersonaRegistrada(UUID idPersona) {
-        if (idPersona == null) {
+    public PersonaRegistrada(Integer idPersona) {
+        if (idPersona == null || idPersona <= 0) {
             throw new IllegalArgumentException(
-                    "El identificador de la persona es obligatorio."
+                    "El identificador de la persona debe ser válido."
             );
         }
 
@@ -19,7 +19,7 @@ public final class PersonaRegistrada {
         this.fechaRegistro = LocalDateTime.now();
     }
 
-    public UUID getIdPersona() {
+    public Integer getIdPersona() {
         return idPersona;
     }
 
@@ -27,3 +27,4 @@ public final class PersonaRegistrada {
         return fechaRegistro;
     }
 }
+

@@ -30,7 +30,15 @@ class PersonaTest {
                 obtenerMunicipio()
         );
 
+        assertNotNull(persona);
+        assertNull(persona.getIdPersona());
+        assertNull(persona.getEventoRegistro());
+
+        persona.asignarIdentificador(1);
+
+        assertEquals(1, persona.getIdPersona());
         assertNotNull(persona.getEventoRegistro());
+
         assertEquals(
                 persona.getIdPersona(),
                 persona.getEventoRegistro().getIdPersona()

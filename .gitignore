@@ -37,3 +37,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Configuracion local y datos sensibles
+.idea/
+.env
+.env.*
+*.sql
+*.dump
+*.backup
+*.log

@@ -2,15 +2,13 @@ package com.cea.domain.event;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.UUID;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonaRegistradaTest {
 
     @Test
     void debeCrearEventoConIdentificadorValido() {
-        UUID id = UUID.randomUUID();
+        Integer id = 1;
 
         PersonaRegistrada evento = new PersonaRegistrada(id);
 
@@ -23,6 +21,14 @@ class PersonaRegistradaTest {
         assertThrows(
                 IllegalArgumentException.class,
                 () -> new PersonaRegistrada(null)
+        );
+    }
+
+    @Test
+    void noDebeCrearEventoConIdentificadorInvalido() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new PersonaRegistrada(0)
         );
     }
 }

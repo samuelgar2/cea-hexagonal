@@ -46,4 +46,9 @@ public final class FechaNacimiento {
     public int hashCode() {
         return Objects.hash(valor);
     }
+
+    @Override
+    public String toString() {
+        return valor.toString();
+    }
 }
